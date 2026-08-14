@@ -46,7 +46,7 @@ const mutation = useMutation({
     e.preventDefault();
     // TODO: replace this with mutation.mutate({ title, body })
     mutation.mutate({ title, body });
-    // console.log("submit", { title, body });
+    console.log("submit", { title, body });
   }
 
   return (
@@ -62,7 +62,7 @@ const mutation = useMutation({
         placeholder="What's on your mind?"
       />
       {/* TODO: disable while mutation.isPending; show "Posting…" as the label */}
-      {/* <button type="submit">Post thread</button> */}
+      <button type="submit">Post thread</button>
       <button type="submit" disabled={mutation.isPending}>
   {mutation.isPending ? "Posting…" : "Post thread"}
 </button>
